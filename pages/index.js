@@ -1,5 +1,6 @@
-import Layout from "../components/Layout"
+import Image from "next/image"
 import Link from "next/link"
+import Layout from "../components/Layout"
 
 export default function Home({pokemonList}) {
   console.log(pokemonList)
@@ -12,8 +13,8 @@ export default function Home({pokemonList}) {
           <li key={index}>
             <Link href={`/pokemon?id=${index + 1}`}>
               <a className="border p-4 border-gray my-2 flex items-center text-lg font-medium bg-gray-200 rounded-md">
-                <img src={pokemon.image} alt={pokemon.name} className="w-20 h-20 mr-3"/>
-                <span className="mr-2">{index + 1}. </span>
+                <Image src={pokemon.image} alt={pokemon.name} width="80" height="80"/>
+                <span className="ml-3 mr-2">{index + 1}. </span>
                 {/* First letter of the pokemon name to upper case */}
                 {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
               </a>

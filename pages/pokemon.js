@@ -1,6 +1,7 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Image from "next/image"
 import Link from 'next/link'
+import Layout from '../components/Layout'
 
 export default function Pokemon({pokemon}) {
     console.log(pokemon)
@@ -11,7 +12,9 @@ export default function Pokemon({pokemon}) {
                 {/* First letter of the pokemon name to upper case */}
                 {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
             </h1>
-            <img src={pokemon.image} alt={pokemon.name} className="mx-auto"/>
+            <div className="mx-auto">
+                <Image src={pokemon.image} alt={pokemon.name} width="600" height="600"/>
+            </div>
             <p>
                 <span className="font-medium mr-2">Weight: </span>
                 {/* ~Weight is given in "hectograms" */}
