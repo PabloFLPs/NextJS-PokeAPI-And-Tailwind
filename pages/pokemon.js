@@ -33,17 +33,17 @@ export default function Pokemon({pokemon}) {
     console.log("background color: " + pokemonColor)
 
     return (
-        <Layout title={pokemon.name}>
-            <h1 className="text-3xl mb-2 text-center font-medium">
+        <Layout title={pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}>
+            <h1 className="text-3xl mb-2 pb-8 text-center font-medium">
                 {/* First letter of the pokemon name to upper case */}
                 {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
             </h1>
-            <div style={{backgroundColor: pokemonColor}} className="mx-auto w-96 h-96 p-6 rounded-full">
+            <div style={{backgroundColor: pokemonColor,}} className="mx-auto w-96 h-96 p-12 rounded-full">
                 <Image src={pokemon.image} alt={pokemon.name} width="336" height="336" objectFit="contain" className="p-24"/>
             </div>
-            <p className="px-4">
+            <p className="px-4 pt-12">
                 <span className="font-medium mr-2">Weight: </span>
-                {/* ~Weight is given in "hectograms" */}
+                {/* Weight is given in "hectograms" */}
                 {pokemon.weight / 10} kilograms
             </p>
             <p className="px-4">
@@ -71,8 +71,7 @@ export default function Pokemon({pokemon}) {
                 {pokemon.moves.map(({move}, index) => <p key={move}>{"- " + move.name[0].toUpperCase() + move.name.slice(1)}</p>)}
             </div>
             */}
-
-            <p className="py-10 text-center">
+            <p className="pb-8 pt-24 text-center">
                 <Link href="/">
                     <a className="text-2xl font-medium">Home</a>
                 </Link>
