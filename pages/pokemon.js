@@ -28,15 +28,15 @@ export default function Pokemon({pokemon}) {
 
             {/* All Pokemon Types */}
             <h2 className="text-xl mt-6 mb-2 font-medium">Types</h2>
-            {pokemon.types.map(({type}, index) => <p>{"- " + type.name[0].toUpperCase() + type.name.slice(1)}</p>)}
+            {pokemon.types.map(({type}, index) => <p key={type.slot}>{"- " + type.name[0].toUpperCase() + type.name.slice(1)}</p>)}
             
             {/* All Pokemon Abilities */}
             <h2 className="text-xl mt-6 mb-2 font-medium">Abilities</h2>
-            {pokemon.abilities.map(({ability}, index) => <p>{"- " + ability.name[0].toUpperCase() + ability.name.slice(1)}</p>)}
+            {pokemon.abilities.map(({ability}, index) => <p key={ability.slot}>{"- " + ability.name[0].toUpperCase() + ability.name.slice(1)}</p>)}
             
             {/* All Pokemon Moves */}
             <h2 className="text-xl mt-6 mb-2 font-medium">Moves</h2>
-            {pokemon.moves.map(({move}, index) => <p>{"- " + move.name[0].toUpperCase() + move.name.slice(1)}</p>)}
+            {pokemon.moves.map(({move}, index) => <p key={move}>{"- " + move.name[0].toUpperCase() + move.name.slice(1)}</p>)}
             
             <p className="mt-10 text-center">
                 <Link href="/">
