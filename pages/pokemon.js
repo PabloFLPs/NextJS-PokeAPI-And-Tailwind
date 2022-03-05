@@ -18,7 +18,7 @@ export default function Pokemon({pokemon}) {
             <p>
                 <span className="font-medium mr-2">Weight: </span>
                 {/* ~Weight is given in "hectograms" */}
-                {pokemon.weight * 10} kilograms
+                {pokemon.weight / 10} kilograms
             </p>
             <p>
                 <span className="font-medium mr-2">Height: </span>
