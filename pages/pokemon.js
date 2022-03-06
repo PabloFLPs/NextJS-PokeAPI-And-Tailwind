@@ -73,7 +73,7 @@ export default function Pokemon({pokemon}) {
             */}
             <p className="pb-8 pt-24 text-center">
                 <Link href="/">
-                    <a className="text-2xl font-medium">Home</a>
+                    <a className="text-2xl font-medium hover:text-gray-700 transition-all duration-300">Home</a>
                 </Link>
             </p>
         </Layout>
