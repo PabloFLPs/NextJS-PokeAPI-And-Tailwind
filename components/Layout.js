@@ -10,7 +10,7 @@ export default function Layout({title, children}) {
             <title>{title}</title>
             <link rel="icon" href="/pokeball-icon.ico" />
         </Head>
-        <main className="container mx-auto max-w-xl pt-8 min-h-screen bg-gray-300 bg-opacity-80 px-6">
+        <main className="container mx-auto max-w-xs sm:max-w-xl pt-8 min-h-screen bg-gray-300 bg-opacity-80 px-6">
             {children}
         </main>
     </div>
