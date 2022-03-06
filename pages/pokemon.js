@@ -38,8 +38,8 @@ export default function Pokemon({pokemon}) {
                 {/* First letter of the pokemon name to upper case */}
                 {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
             </h1>
-            <div style={{backgroundColor: pokemonColor,}} className="mx-auto w-96 h-96 p-12 rounded-full">
-                <Image src={pokemon.image} alt={pokemon.name} width="336" height="336" objectFit="contain" className="p-24"/>
+            <div style={{backgroundColor: pokemonColor,}} className="mx-auto w-42 h-42 sm:p-0 rounded-full sm:w-96 sm:h-96">
+                <Image src={pokemon.image} alt={pokemon.name} width="384" height="384" objectFit="contain" className=""/>
             </div>
             <p className="px-4 pt-12">
                 <span className="font-medium mr-2">Weight: </span>
