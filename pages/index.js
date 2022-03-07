@@ -28,7 +28,7 @@ export default function Home({pokemonList}) {
 
 export async function getStaticProps(context) {
   try {
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=898")
     /*
     {
       "count": 1126,
