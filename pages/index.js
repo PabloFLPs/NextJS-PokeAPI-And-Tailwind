@@ -34,7 +34,13 @@ export async function getStaticProps(context) {
       "count": 1126,
       "next": "https://pokeapi.co/api/v2/pokemon?offset=151&limit=151",
       "previous": null,
-      "results": [],
+      "results": [
+        {
+          "name": "bulbasaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/1/"
+        },
+        More Pokemon...
+      ],
     }
     */
     const {results} = await response.json()
