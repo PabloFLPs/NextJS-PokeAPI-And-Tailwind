@@ -73,7 +73,7 @@ export default function Pokemon({pokemon}) {
                 {pokemon.moves.map(({move}, index) => <p key={move}>{"- " + move.name[0].toUpperCase() + move.name.slice(1)}</p>)}
             </div>
             */}
-            <p className="flex items-center pb-8 pt-24 text-center">
+            <p className="flex items-center pt-14 text-center">
                 <div className="group mx-auto flex items-center">
                     <Image src={PokemonCenter} alt="pokemon center" width="76" height="68" className="group-hover:scale-110 transition-all duration-300"/>
                     <Link href="/">
