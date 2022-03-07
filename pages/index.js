@@ -12,7 +12,7 @@ export default function Home({pokemonList}) {
         {pokemonList.map((pokemon, index) => (
           <li key={index}>
             <Link href={`/pokemon?id=${index + 1}`}>
-              <a className="border p-4 border-gray my-2 flex items-center text-lg font-medium bg-gray-200 rounded-md">
+              <a className="border-2 p-4 my-2 flex items-center text-lg font-medium bg-gray-200 rounded-md hover:scale-105 hover:border-orange-200 hover:bg-gray-100 transition-all duration-300">
                 <Image src={pokemon.image} alt={pokemon.name} width="80" height="80"/>
                 <span className="ml-3 mr-2">{index + 1}. </span>
                 {/* First letter of the pokemon name to upper case */}
