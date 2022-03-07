@@ -5,7 +5,7 @@ export default function Layout({title, children}) {
   //const randomBackground = Math.floor(Math.random() * 4)
 
   return (
-    <div className="bg-[url('../public/background/electric-pokemon.png')]">
+    <div className="bg-[url('../public/background/electric-pokemon.png')] text-dark-gray">
         <Head>
             <title>{title}</title>
             <link rel="icon" href="/pokeball-icon.ico" />
