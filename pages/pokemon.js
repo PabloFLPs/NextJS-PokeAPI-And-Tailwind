@@ -3,6 +3,8 @@ import Image from "next/image"
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
+import PokemonCenter from "../public/pokemon-center-icon.png"
+
 export default function Pokemon({pokemon}) {
     console.log("pokemon id: " + pokemon.id)
 
@@ -71,10 +73,13 @@ export default function Pokemon({pokemon}) {
                 {pokemon.moves.map(({move}, index) => <p key={move}>{"- " + move.name[0].toUpperCase() + move.name.slice(1)}</p>)}
             </div>
             */}
-            <p className="pb-8 pt-24 text-center">
-                <Link href="/">
-                    <a className="text-2xl font-medium hover:text-gray-700 transition-all duration-300">Home</a>
-                </Link>
+            <p className="flex items-center pb-8 pt-24 text-center">
+                <div className="group mx-auto flex items-center">
+                    <Image src={PokemonCenter} alt="pokemon center" width="76" height="68" className="group-hover:scale-110 transition-all duration-300"/>
+                    <Link href="/">
+                        <a className="text-2xl font-medium border-b-2 border-transparent group-hover:border-b-red group-hover:text-red transition-all duration-300">Home</a>
+                    </Link>
+                </div>
             </p>
         </Layout>
     )
