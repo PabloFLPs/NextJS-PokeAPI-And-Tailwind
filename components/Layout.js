@@ -2,10 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 
 export default function Layout({title, children}) {
-  //const randomBackground = Math.floor(Math.random() * 4)
-
   return (
-    <div className="bg-[url('../public/background/electric-pokemon.png')] text-dark-gray">
+    <div className="bg-[url('../public/background/pokemon-background.png')] text-dark-gray">
         <Head>
             <title>{title}</title>
             <link rel="icon" href="/pokeball-icon.ico" />
