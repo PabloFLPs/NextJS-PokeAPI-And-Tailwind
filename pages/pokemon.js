@@ -43,12 +43,12 @@ export default function Pokemon({pokemon}) {
             <div style={{backgroundColor: pokemonColor,}} className="mx-auto w-42 h-42 sm:p-0 rounded-full sm:w-96 sm:h-96">
                 <Image src={pokemon.image} alt={pokemon.name} width="384" height="384" objectFit="contain" className=""/>
             </div>
-            <p className="px-4 pt-12">
+            <p className="px-4 pt-10 text-center">
                 <span className="font-medium mr-2">Weight: </span>
                 {/* Weight is given in "hectograms" */}
                 {pokemon.weight / 10} kilograms
             </p>
-            <p className="px-4">
+            <p className="px-4 text-center">
                 <span className="font-medium mr-2">Height: </span>
                 {/* Height is given in "decimeters" */}
                 {pokemon.height * 10} centimeters
@@ -56,14 +56,16 @@ export default function Pokemon({pokemon}) {
 
             {/* All Pokemon Types */}
             <div className="px-4">
-                <h2 className="text-xl mt-6 mb-2 font-medium">Types</h2>
-                {pokemon.types.map(({type}, index) => <p key={type.slot}>{"- " + type.name[0].toUpperCase() + type.name.slice(1)}</p>)}
+                <h2 className="text-xl mt-6 mb-2 font-medium text-center">Types</h2>
+                <div className="flex gap-1 justify-center">
+                    {pokemon.types.map(({type}, index) => <p style={{backgroundColor: colors[type.name.toString()],}} key={type.slot} className="rounded-md w-24 text-center">{type.name[0].toUpperCase() + type.name.slice(1)}</p>)}
+                </div>
             </div>
 
             {/* All Pokemon Abilities */}
             <div className="px-4">
-                <h2 className="text-xl mt-6 mb-2 font-medium">Abilities</h2>
-                {pokemon.abilities.map(({ability}, index) => <p key={ability.slot}>{"- " + ability.name[0].toUpperCase() + ability.name.slice(1)}</p>)}
+                <h2 className="text-xl mt-6 mb-2 font-medium text-center">Abilities</h2>
+                {pokemon.abilities.map(({ability}, index) => <p key={ability.slot} className="text-center">{"- " + ability.name[0].toUpperCase() + ability.name.slice(1)}</p>)}   
             </div>
 
             {/* All Pokemon Moves */}
@@ -74,7 +76,7 @@ export default function Pokemon({pokemon}) {
             </div>
             */}
             <p className="flex items-center pt-14 text-center">
-                <div className="group mx-auto flex items-center">
+                <div className="group mx-auto flex items-center bottom-0">
                     <Image src={PokemonCenter} alt="pokemon center" width="76" height="68" className="group-hover:scale-110 transition-all duration-300"/>
                     <Link href="/">
                         <a className="text-2xl font-medium border-b-2 border-transparent group-hover:border-b-red group-hover:text-red transition-all duration-300">Home</a>
