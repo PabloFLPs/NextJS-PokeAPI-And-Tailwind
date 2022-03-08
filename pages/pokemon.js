@@ -58,7 +58,14 @@ export default function Pokemon({pokemon}) {
             <div className="px-4">
                 <h2 className="text-xl mt-6 mb-2 font-medium text-center">Types</h2>
                 <div className="flex gap-1 justify-center">
-                    {pokemon.types.map(({type}, index) => <p style={{backgroundColor: colors[type.name.toString()],}} key={type.slot} className="rounded-md w-24 text-center">{type.name[0].toUpperCase() + type.name.slice(1)}</p>)}
+                    {
+                    pokemon.types.map(({type}, index) => 
+                    type.name=="ghost" | type.name=="poison" | type.name=="dark" | type.name=="water" | type.name=="rock"
+                    ?
+                    <p style={{backgroundColor: colors[type.name.toString()],}} key={type.slot} className="rounded-md w-24 text-center text-white">{type.name[0].toUpperCase() + type.name.slice(1)}</p>
+                    :
+                    <p style={{backgroundColor: colors[type.name.toString()],}} key={type.slot} className="rounded-md w-24 text-center text-black">{type.name[0].toUpperCase() + type.name.slice(1)}</p>)
+                    }
                 </div>
             </div>
 
