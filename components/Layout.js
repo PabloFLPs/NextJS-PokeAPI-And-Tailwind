@@ -8,6 +8,7 @@ export default function Layout({title, children}) {
             <title>{title}</title>
             <link rel="icon" href="/pokeball-icon.ico" />
             <meta name="description" content="Pokedex including all 898 Pokemon - 8 Generations. Made with NextJS with Tailwind and PokeAPI."/>
+            <meta property="og:image" content="url('../public/pokeball-icon.png')"/>
         </Head>
         <main className="container mx-auto max-w-xs sm:max-w-xl p-8 min-h-screen bg-gray-300 bg-opacity-80">
             {children}
