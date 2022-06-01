@@ -13,7 +13,7 @@ export default function Home({pokemonList}) {
           <li key={index}>
             <Link href={`/pokemon?id=${index + 1}`}>
               <a className="border p-4 my-2 flex items-center text-lg font-medium bg-gray-200 rounded-md hover:scale-105 hover:border-red hover:bg-gray-50 transition-all duration-300">
-                <Image src={pokemon.image} alt={pokemon.name} unoptimized width="80" height="80"/>
+                <Image src={pokemon.image} alt={pokemon.name} unoptimized width="100" height="100"/>
                 <span className="ml-3 mr-2">{index + 1}. </span>
                 {/* First letter of the pokemon name to upper case */}
                 {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
